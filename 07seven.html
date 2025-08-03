@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Component Syntax</title>
+    <!-- Load React & ReactDOM from CDN -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Load Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Load your script with Babel for JSX support -->
+    <script type="text/babel">
+      // Creating a functional Components to return input component
+      // React components are JavaScript functions that return markup
+      function FirstComp() {
+        return (
+          <div>
+            <h1>Add Two Numbers</h1>
+            <input />
+            <input />
+            <button>ADD</button>
+          </div>
+        );
+      }
+      const div = (
+        <div>
+          <p> {FirstComp()}</p>
+          <p> Line below is equivalent to above line. Its called as component Syntax </p>
+          <FirstComp></FirstComp>
+          <p> Below is the short form of the component syntax</p>
+          <FirstComp/>
+          <p>So, we have created our own HTML Element 'FirstComp'</p>
+        </div>
+      );
+
+      const container = document.querySelector("#root");
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>

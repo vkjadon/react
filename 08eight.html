@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>State Variable and OnClick Alert</title>
+    <!-- Load React & ReactDOM from CDN -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Load Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Load your script with Babel for JSX support -->
+    <script type="text/babel">
+      // Creating a functional Components to return input component
+      // React components are JavaScript functions that return markup
+      
+      // State variable are the Data that changes over time and affects UI
+
+      const { useState } = React;
+
+      function FirstComp() {
+
+        // define state variable and its updater function using the useState hook
+        const [firstNum, setFirstNum] = useState();
+        const [secondNum, setSecondNum] = useState();
+
+        return (
+          <>
+            <h1>Add Two Numbers</h1>
+            <input placeholder = "First Number" value = {firstNum} />
+            <input placeholder = "Second Number" value = {secondNum} />
+            <button onClick = { () => alert("Clicked") } >ADD</button>
+          </>
+        );
+      }
+      
+      const app = (
+        <>          
+          <FirstComp/>
+        </>
+      );
+
+      const container = document.querySelector("#root");
+      ReactDOM.createRoot(container).render(app);
+
+    </script>
+  </body>
+</html>

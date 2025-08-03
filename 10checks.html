@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Validating</title>
+    <!-- Load React & ReactDOM from CDN -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Load Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Load your script with Babel for JSX support -->
+    <script type="text/babel">
+      // Creating a functional Components to return input component
+      // React components are JavaScript functions that return markup
+
+      // State variable are the Data that changes over time and affects UI
+
+      const { useState } = React;
+
+      function FirstComp() {
+        const [firstNum, setFirstNum] = useState();
+        const [secondNum, setSecondNum] = useState();
+        const [sum, setSum] = useState(0);
+        const [error, setError] = useState('');
+
+        const isValidNumber = (val) => {
+          return !isNaN(val) && val.trim() !== "";
+        };
+
+        const handleAdd = () => {
+          if (!isValidNumber(firstNum) || !isValidNumber(secondNum)) {
+            setError("Please enter valid numbers in both fields.");
+            setSum(null);
+          } else {
+            setSum(parseFloat(firstNum) + parseFloat(secondNum));
+            setError('')
+          }
+        };
+
+        return (
+          <>
+            <h1>Add Two Numbers</h1>
+            <input
+              placeholder="First Number"
+              value={firstNum}
+              onChange={(e) => setFirstNum(e.target.value)}
+            />
+            <input
+              placeholder="Second Number"
+              value={secondNum}
+              onChange={(e) => setSecondNum(e.target.value)}
+            />
+            <button onClick={handleAdd}>ADD</button>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <p>{sum}</p>
+          </>
+        );
+      }
+
+      const app = (
+        <>
+          <FirstComp />
+        </>
+      );
+
+      const container = document.querySelector("#root");
+      ReactDOM.createRoot(container).render(app);
+    </script>
+  </body>
+</html>

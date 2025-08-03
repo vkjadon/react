@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insert Values inside JSX Element</title>
+    <!-- Load React & ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- Load Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Load your script with Babel for JSX support -->
+    <script type="text/babel">
+
+      const div = (
+        <div>
+          <button>Click Me</button>
+          <h1>Add 5 and 7</h1>
+          <p>The sum is {5 + 7}</p>
+        </div>
+      )
+
+      const container=document.querySelector('#root')
+      ReactDOM.createRoot(container).render(div);
+      
+    </script>
+  </body>
+</html>
