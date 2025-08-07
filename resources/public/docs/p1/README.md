@@ -53,7 +53,6 @@
 
 * Add css to `.navbar` class
 
-<pre>
 ```css 
 .navbar { 
     width: 100%; 
@@ -67,42 +66,45 @@
     z-index: 1; 
     }
 ```
-</pre>
 
 It styles a fixed-width, top-positioned navigation bar (.navbar) that spans the full width of the screen, uses a horizontal flex layout to space its child elements, has internal padding, a small font size, light text color, a dark-to-transparent top-down gradient background, and is layered above other content using z-index.
 
 * Add css to `.navbar-left` class
 
-<pre>
+```css
 .navbar-left {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-</pre>
+```
+
 It creates a horizontal flex container (.navbar-left) where items are vertically centered and spaced 50px apart.
 
-<pre>
+```css
 .navbar-left img {
     width: 90px;
 }
-</pre>
+```
+
 It sets the width of all <img> elements inside .navbar-left to 90 pixels.
 
-<pre>
+```css
 .navbar-left ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
-</pre>
+```
+
 It styles the <ul> inside .navbar-left as a horizontal flex container with no bullet points and 20px spacing between list items.
 
-<pre>
+```css
 .navbar-left ul li{
     cursor: pointer;
 }
-</pre>
+```
+
 It makes each list item (li) inside .navbar-left ul show a pointer cursor on hover, indicating they are clickable.
 
 

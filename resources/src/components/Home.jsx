@@ -6,7 +6,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ padding: "2rem", display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
+    <div style={{ padding: "2rem", display: "flex", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
       {projects.map(project => (
         <div
           key={project}
