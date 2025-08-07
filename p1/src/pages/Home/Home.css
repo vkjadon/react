@@ -1,0 +1,14 @@
+.hero {
+    position: relative;
+}
+.banner-img{
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 70%);
+    -webkit-mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0) 70%);
+}
+.hero-caption {
+    position: absolute;
+    width: 100%;
+    padding-left: 6%;
+    bottom: 0;
+}
