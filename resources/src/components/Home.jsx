@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-const projects = ['p1', 'b1', 'p3']; // Or fetch dynamically
+const projects = ['b1', 'b2', 'p1']; // Or fetch dynamically
 
 export default function Home() {
   const navigate = useNavigate();

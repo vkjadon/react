@@ -1,6 +1,13 @@
 ```js
-npm create vite@latest my-app --template react
-cd my-app
+npm create vite@latest
+```
+
+    - project name : b1
+    - framework : react
+    - variant : javascript
+
+```js
+cd b1
 npm install
 npm run dev
 ```
