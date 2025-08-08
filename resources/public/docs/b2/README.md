@@ -23,13 +23,15 @@ cd b2
 npm install
 npm run dev
 ```
+## File Structure
+There are number of ways to approach this project. We will introduce commonly used professional file structure. Its a good practice to keep components group in one folder inside a `components` folder inside `src` folder.
 
 ```css
 b2/
 |-- public
 |-- src/
 │-- |-- components/
-|-- |-- |-- sum_form/
+|-- |-- |-- formComponents/
 |-- |-- |-- |-- InputField.jsx  
 |-- |-- |-- |-- SubmitButton.jsx 
 |-- |-- |-- |-- SumForm.jsx 
