@@ -1,6 +1,7 @@
+<p style="center">dfdf</p>
 ## Project Outline
 
-The project you will learn is to add two numbers. Both the numbers are to be added through two input elements and should output sum after validation on a button click.
+In this project you will learn to add two numbers. Both the numbers are to be added through two input elements and should output sum after validation on a button click.
 
 ## Learning Outcome
 
@@ -8,6 +9,7 @@ The project you will learn is to add two numbers. Both the numbers are to be add
 * useState
 
 ## Create a Project
+
 ```js
 npm create vite@latest
 ```
@@ -21,6 +23,25 @@ cd b2
 npm install
 npm run dev
 ```
+
+```css
+b2/
+|-- public
+|-- src/
+│-- |-- components/
+|-- |-- |-- sum_form/
+|-- |-- |-- |-- InputField.jsx  
+|-- |-- |-- |-- SubmitButton.jsx 
+|-- |-- |-- |-- SumForm.jsx 
+|-- |-- App.css
+|-- |-- App.jsx
+|-- |-- index.css
+|-- |-- main.jsx
+|-- ...
+|-- index.html
+
+```
+
 ## Clean App.jsx
 
 Open `App.jsx` and remove some of the code to make the file look like as below. Alternatively, you can paste the following code in the `App.jsx`
