@@ -1,4 +1,5 @@
-<p style="center">dfdf</p>
+<h1>App to Add Two Numbers</h1>
+
 ## Project Outline
 
 In this project you will learn to add two numbers. Both the numbers are to be added through two input elements and should output sum after validation on a button click.
@@ -6,7 +7,11 @@ In this project you will learn to add two numbers. Both the numbers are to be ad
 ## Learning Outcome
 
 * Components
+  - a React component is a `JavaScript` function that combines markup, CSS, and JavaScript. It returns you `JSX`. 
+  - a react components are reusable UI elements for the app.
 * useState
+  - useState is a `React Hook` that lets functional components create and manage their own state. In simple terms, it allows a component to remember information and update it when needed. 
+  - Hooks are special functions in React that let you “hook into” features like state and lifecycle methods without writing a class. 
 
 ## Create a Project
 
@@ -23,6 +28,7 @@ cd b2
 npm install
 npm run dev
 ```
+
 ## File Structure
 There are number of ways to approach this project. We will introduce commonly used professional file structure. Its a good practice to keep components group in one folder inside a `components` folder inside `src` folder.
 
