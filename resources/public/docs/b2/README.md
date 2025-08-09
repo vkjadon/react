@@ -116,6 +116,21 @@ function SumForm() {
 }
 export default SumForm;
 ```
+## Update `App.jsx`
+
+Now, we are ready to run this app. Before running, we have to mount `SumForm` component in the `App.jsx`.
+
+```js
+import SumForm from './components/formComponents/SumForm'
+function App() {
+  return (
+    <>
+      <SumForm />
+    </>
+  )
+}
+export default App
+```
 
 Run the app using `npm run dev` you can inspect the browser. You can monitor the value entered displayed in the component if you have installed the react extension in the browser.
 
@@ -193,7 +208,15 @@ const handleAdd = () => {
   else setSum("Error! Enter a Valid Number");
 };
 ```
+The `isValNumber` function can be converetd into a clear one line syntax as below
+
+```js
+const isValidNumber = (val) => !isNaN(val);
+```
+In this `isValidNumber` is declared as a constant variable that will hold an arrow function. The arrow function takes `val` to check and returns (explicit return as no curly braces are used) `true` in case `val` is a number (`isNaN(4)` returns `false` but `!isNaN(4)` return `true`)
+
 ## Try Yourself
 
 1. Display `Error` in `RED` color.
 2. Display the error number specific. If first number is not valid, it should write `First Number is Not Valid` and similarly for second number.
+3. Add style to the page
