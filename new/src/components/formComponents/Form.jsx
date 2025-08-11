@@ -20,8 +20,6 @@ function Form() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(JSON.stringify(formData, null, 2));

@@ -96,7 +96,7 @@ Add the following css in `form.css` in `formComponents` folder
 
 ## Update `SumForm.jsx`
 
-Update `SumForm.jsx` to define the `SumForm` component, which uses the `InputField` component for user input. To manage (store and update) the value entered in the input field, we use the `useState` hook. Here, `firstNum` holds the current value of the input field, and `setFirstNum` is the function used to update that value. The `onChange` prop listens for changes in the input field, and the function `setFirstNum(e.target.value)` updates the `firstNum` state with the new value entered by the user.
+Update `SumForm.jsx` to define the `SumForm` component, which uses the `InputField` component for user input. To manage (store and update) the value entered in the input field, we use the `useState` hook. Here, `firstNum` holds the current value of the input field, and `setFirstNum` is the function used to update that value. The `onChange` listens for changes in the input field, and the function `setFirstNum(e.target.value)` updates the `firstNum` state with the new value entered by the user. `e` is the event object automatically passed by React when an event happens. `target` refers to the HTML element that triggered the event. In this case, it's the `input` element. If we enter `3492`, `e.target.value` will be `3492`
 
 ```js
 import InputField from "./InputField";
