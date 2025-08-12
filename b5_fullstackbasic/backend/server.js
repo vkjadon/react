@@ -2,8 +2,9 @@ import express from "express";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello, World!");
+app.get("/api", (req, res) => {
+  const message = "Hello, World!";
+  res.json(message);
 });
 
 const PORT = process.env.PORT || 3000;
@@ -18,8 +19,20 @@ app.get("/api/users", (req, res) => {
     { id: 5, name: "Eve" },
     { id: 6, name: "Eve" },
   ];
-  res.send(users);
+  res.json(users);
   // try res.json(users);
+});
+
+// add 5 git users
+app.get("/api/git", (req, res) => {
+  const gitUsers = [
+    { id: 1, name: "GitUser1" },
+    { id: 2, name: "GitUser2" },
+    { id: 3, name: "GitUser3" },
+    { id: 4, name: "GitUser4" },
+    { id: 5, name: "GitUser5" },
+  ];
+  res.json(gitUsers);
 });
 
 app.listen(PORT, () => {
