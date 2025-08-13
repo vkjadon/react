@@ -4,6 +4,9 @@ const projects = [
                   {"proj":'b1', "title":"Vite Project Home"}, 
                   {"proj":'b2', "title":"Summation App"}, 
                   {"proj":'p1', "title":"Navigation Bar"}, 
+                  {"proj":'dl1', "title":"Terms Used in Deep Learning"}, 
+                  {"proj":'dl2', "title":"Linear Regression (One Feature)"}, 
+                  {"proj":'dl3', "title":"Linear Regression (Multiple Features)"}, 
                 ]; // Or fetch dynamically
 
 export default function Home() {
