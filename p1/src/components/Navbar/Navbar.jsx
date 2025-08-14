@@ -31,7 +31,6 @@ const Navbar = () => {
               <p>Signout of Netflix</p>
             </div>
           </div>
-
         </div>
     </div>
   )
