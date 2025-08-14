@@ -18,3 +18,12 @@
   content: '';
   display: table;
 }
+
+.winner-status {
+  margin-bottom: 10px;
+}
+
+.status {
+  margin-bottom: 10px;
+  color: brown;
+}

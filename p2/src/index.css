@@ -56,9 +56,6 @@ body {
   padding: 0;
 }
 
-.status {
-  margin-bottom: 10px;
-}
 .game {
   display: flex;
   flex-direction: row;
