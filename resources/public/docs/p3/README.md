@@ -117,5 +117,3 @@ function calculateWinner(squares) {
   color: brown;
 }
 ```
-
-
