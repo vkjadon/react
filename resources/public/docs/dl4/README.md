@@ -90,6 +90,9 @@ Let us try to evaluate the each term separately.
 
 $\frac{\partial L(a, y)}{\partial a}=-\frac {y}{a}+\frac {(1-y)}{(1-a)}$
 
+Using 
+$\frac{\partial (\frac{u(x)}{v(x)})}{\partial y}=\frac {vu'-uv'}{v^2}$, we evaluate
+
 $ \frac{\partial a}{\partial z}=\frac{\partial }{\partial z} (\frac {1}{1+e^{-z}}) = \frac {e^{-z}}{(1+e^{-z})^2}=\frac {1}{1+e^{-z}}\frac {1+e^{-z}-1}{1+e^{-z}} =a(\frac {1+e^{-z}}{1+e^{-z}} - \frac {1}{1+e^{-z}})$
 
 $ \frac{\partial a}{\partial z}=a(1-a)$

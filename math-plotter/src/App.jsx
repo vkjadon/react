@@ -7,7 +7,7 @@ export default function App() {
   const [func, setFunc] = useState("sin(x)");
   const [xMin, setXMin] = useState(-5);
   const [xMax, setXMax] = useState(5);
-  const [clipValue, setClipValue] = useState(1e6); // default value
+  const [clipValue, setClipValue] = useState(1e3); // default value
 
   const generateData = () => {
     if (xMin >= xMax) return { x: [], y: [] };
@@ -19,7 +19,7 @@ export default function App() {
     for (let i = xMin; i <= xMax; i += step) {
       try {
         let val = evaluate(func, { x: i });
-        
+
         if (Math.abs(val) < clipValue && isFinite(val)) {
           x.push(i);
           y.push(val);
@@ -80,7 +80,6 @@ export default function App() {
         </label>
       </div>
 
-      {/* Two-column layout */}
       <div className="content-grid">
         <div className="instructions">
           <h2>How to Write Functions</h2>
@@ -108,8 +107,12 @@ export default function App() {
             </li>
           </ul>
           <p className="note">
-            ⚠️ Ensure <code>xMin &lt; xMax</code>. Invalid values (like{" "}
-            <code>log(-1)</code> or <code>1/0</code>) are skipped.
+            Clipping Value: This is the maximum allowed absolute value of
+            function output. Example: If you set it to 1000, values larger than
+            1000 or smaller than -1000 will not be plotted.
+          </p>
+          <p className="note">
+            Invalid values (like <code>log(-1)</code> or <code>1/0</code>) are skipped.
           </p>
         </div>
 
